@@ -11,6 +11,8 @@
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <script src="/frontPage.js" defer ></script>
+
 </head>
 
 <body>
@@ -38,7 +40,7 @@
 
     <div class="content-wrapper reveal">
         <h2 class="headline">KakiPhone</h2>
-        <h3 class="subhead">Titanium. So Strong. So light. So pro.</h3>
+        <h3 class="subhead">Unfair Advantage. 144Hz. Zero Lag</h3>
         <div class="cta-links">
             <a href="#" class="btn btn-blue">Learn More</a>
             <a href="#" class="btn btn-outline">Buy</a>
@@ -54,7 +56,7 @@
 <section class="hero-section light-theme">
     <div class="content-wrapper reveal">
         <h2 class="headline" style="color: black;">KakiWatch Ultra</h2>
-        <h3 class="subhead" style="color: black;">Adventure awaits.</h3>
+        <h3 class="subhead" style="color: black;">Your HUD in real life.</h3>
 
         <div class="cta-links">
             <a href="#" class="btn btn-blue">Learn More</a>
@@ -70,7 +72,7 @@
 <section class="hero-section dark-theme">
     <div class="content-wrapper reveal">
         <h2 class="headline">KakiPad Air</h2>
-        <h3 class="subhead">Two sizes. Faster chip. Does it all</h3>
+        <h3 class="subhead">Bigger Screen. Better Headshots.</h3>
 
         <div class="cta-links">
             <a href="#" class="btn btn-blue">Learn more</a>
@@ -95,28 +97,10 @@
     <div class="grid-item reveal">
         <h2 class="grid-title">About us</h2>
         <p class="grid-desc">Meet the Kaki Gamerz Team.</p>
-        <a href="/aboutPage.html" class="link">Meet the Team</a>
+        <a href="/aboutPage.html" class="link">Meet the Squad.</a>
         <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
              alt="Team">
     </div>
 </div>
-
-
-<script>
-    window.addEventListener('scroll', reveal);
-
-    function reveal(){
-        var reveals= document.querySelectorAll('.reveal');
-        for (var i=0; i< reveals.length; i++){
-            var windowheight = window.innerHeight;
-            var revealtop = reveals[i].getBoundingClientRect().top;
-            var revealpoint= 100;
-            if(revealtop < windowheight - revealpoint){
-                reveals[i].classList.add('active');
-            }
-        }
-    }
-    reveal();
-</script>
 </body>
 </html>

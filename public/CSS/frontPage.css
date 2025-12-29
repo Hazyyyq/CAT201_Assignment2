@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,19 +6,19 @@
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-body{
+body {
     background-color: #fff;
     overflow-x: hidden;
 }
 
 nav {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     height: 48px;
     width: 100%;
     position: fixed;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid rgba(255,255,233,0.1);
+    border-bottom: 1px solid rgba(255, 255, 233, 0.1);
     backdrop-filter: saturate(180%) blur(20px);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
 }
@@ -41,6 +41,12 @@ nav {
 
 }
 
+.logo:hover {
+    color: #66fcf1;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(102, 252, 241, 0.6);
+}
+
 .nav-links a {
     color: #d6d6d6;
     text-decoration: none;
@@ -50,7 +56,9 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #fff
+    color: #66fcf1;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(102, 252, 241, 0.6);
 }
 
 .search-box i {
@@ -60,7 +68,8 @@ nav {
 
 .hero-section {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -129,7 +138,9 @@ nav {
 }
 
 .btn-blue:hover {
-    background-color: #0077ed;
+    color: #66fcf1;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(102, 252, 241, 0.6);
 }
 
 .btn-outline {
@@ -138,7 +149,9 @@ nav {
 }
 
 .btn-outline:hover {
-    background-color: rgba(0, 113, 227, 0.1);
+    color: #66fcf1;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(102, 252, 241, 0.6);
 }
 
 .btn-outline-dark {
@@ -147,7 +160,9 @@ nav {
 }
 
 .btn-outline-dark:hover {
-    background-color: rgba(0, 113,227,0.1);
+    color: #66fcf1;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(102, 252, 241, 0.6);
 }
 
 .grid-section {
@@ -172,10 +187,11 @@ nav {
 
 .grid-item:hover {
     transform: scale(1.02);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
 }
 
-.grid-title{
+.grid-title {
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 10px;
@@ -195,7 +211,9 @@ nav {
 }
 
 .link:hover {
-    text-decoration: underline;
+    color: #66fcf1;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(102, 252, 241, 0.6);
 }
 
 .grid-item img {
