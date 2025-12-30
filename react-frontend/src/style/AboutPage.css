@@ -43,6 +43,8 @@ nav {
 .logo {
     color: #f5f5f7;
     text-decoration: none;
+    font-family: 'Cinzel Decorative', cursive;
+    text-decoration: none;
     font-weight: 600;
     font-size: 1.1rem;
 }
@@ -94,20 +96,26 @@ nav {
 
 /* The Main Title (H1) */
 .big-brand-title {
-    font-size: 5rem; /* Massive size (80px) */
-    font-weight: 900; /* Extra Bold */
+    font-size: 4rem; /* Massive size (80px) */
+    font-weight: 700; /* Extra Bold */
     margin: 0;
     line-height: 1.1;
     text-transform: uppercase;
     letter-spacing: -2px; /* Tightens the letters for a modern look */
     color: #fff;
-    font-family: 'Inter', sans-serif; /* Or your preferred font */
+    font-family: 'Cinzel Decorative', cursive;
 }
 
 /* The Neon Effect */
 .neon-text {
     color: #66fcf1; /* Your Neon Cyan */
     text-shadow: 0 0 20px rgba(102, 252, 241, 0.5); /* Glow effect */
+}
+
+.neon-text-title {
+    color: #66fcf1; /* Your Neon Cyan */
+    text-shadow: 0 0 20px rgba(102, 252, 241, 0.5); /* Glow effect */
+    font-family: 'Cinzel Decorative', cursive;
 }
 
 /* The Tagline */

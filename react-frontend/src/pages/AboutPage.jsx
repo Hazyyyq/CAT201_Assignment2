@@ -30,7 +30,7 @@ function FrontPage() {
             <main className="container">
 
                 <div className="brand-header">
-                    <h1 className="big-brand-title">KAKI <span className="neon-text">GAMERZ</span></h1>
+                    <h1 className="big-brand-title">KAKI <span className="neon-text-title">GAMERZ</span></h1>
                     <hr className="separator2"/>
                     <div className="brand-tagline">YOUR REALITY, LEVELED UP.</div>
 
