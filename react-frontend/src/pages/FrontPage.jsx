@@ -48,7 +48,7 @@ function FrontPage() {
             <section className="hero-section dark-theme">
 
                 <div className="content-wrapper reveal">
-                    <h2 className="headline">KakiPhone</h2>
+                    <h2 className="headline">Kaki<span className="highlight">Phone</span></h2>
                     <h3 className="subhead">Unfair Advantage. 144Hz. Zero Lag</h3>
                     <div className="cta-links">
                         <a href="#" className="btn btn-blue">Learn More</a>
@@ -65,7 +65,8 @@ function FrontPage() {
 
             <section className="hero-section light-theme">
                 <div className="content-wrapper reveal">
-                    <h2 className="headline" style={{color: 'black'}}>KakiWatch Ultra</h2>
+                    <h2 className="headline" style={{color: 'black'}}>Kaki<span className="highlight" style={{color: '#4cc8bf'}}>Watch </span>Ultra
+                    </h2>
                     <h3 className="subhead" style={{color: 'black'}}>Your HUD in real life.</h3>
 
                     <div className="cta-links">
@@ -82,7 +83,7 @@ function FrontPage() {
 
             <section className="hero-section dark-theme">
                 <div className="content-wrapper reveal">
-                    <h2 className="headline">KakiPad Air</h2>
+                    <h2 className="headline">Kak<span className="highlight">iPad</span> Air</h2>
                     <h3 className="subhead">Bigger Screen. Better Headshots.</h3>
 
                     <div className="cta-links">

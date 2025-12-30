@@ -2,8 +2,7 @@ import {useEffect, useState} from 'react'
 import {BrowserRouter as Router, Link} from 'react-router-dom';
 
 //import AboutPage from '../pages/AboutPage';
-import reactLogo from '../assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import '../style/AboutPage.css'
 
 function FrontPage() {
@@ -52,7 +51,7 @@ function FrontPage() {
                 <div className="All-Grid">
 
                     <article className="managerProfile">
-                        <img src="../../public/img/test.jpeg" alt="Airil Aiman bin Azman"/>
+                        <img src="/img/test.jpeg" alt="Airil Aiman bin Azman"/>
                         <div className="info">
                             <h5>Airil Aiman bin Azman</h5>
                             <p>Kaki Gamerz Manager</p>
@@ -66,7 +65,7 @@ function FrontPage() {
                     </article>
 
                     <article className="managerProfile">
-                        <img src="../../public/img/test.jpeg" alt="Mohammad Aiman Akmal bin Azlan"/>
+                        <img src="/img/test.jpeg" alt="Mohammad Aiman Akmal bin Azlan"/>
                         <div className="info">
                             <h5>Mohammad Aiman Akmal bin Azlan</h5>
                             <p>Kaki Gamerz Manager</p>
@@ -80,7 +79,7 @@ function FrontPage() {
                     </article>
 
                     <article className="managerProfile">
-                        <img src="../../public/img/test.jpeg" alt="Muhammad Johan bin Talib"/>
+                        <img src="/img/test.jpeg" alt="Muhammad Johan bin Talib"/>
                         <div className="info">
                             <h5>Muhammad Johan bin Talib</h5>
                             <p>Kaki Gamerz Manager</p>
@@ -94,16 +93,16 @@ function FrontPage() {
                     </article>
 
                     <article className="managerProfile">
-                        <img src="../../public/img/test.jpeg" alt="Muhammad Haziq Irsyad bin Mohd Rafeein"/>
+                        <img src="/img/test.jpeg" alt="Muhammad Haziq Irsyad bin Mohd Rafeein"/>
                         <div className="info">
                             <h5>Muhammad Haziq Irsyad bin Mohd Rafeein</h5>
                             <p>Kaki Gamerz Manager</p>
                             <p>Project Director</p>
                         </div>
                         <ul className="ManagerSocMed">
-                            <li><a href="#" target="_blank"><i className="fa fa-facebook"></i></a></li>
-                            <li><a href="#" target="_blank"><i className="fa fa-instagram"></i></a></li>
-                            <li><a href="#" target="_blank"><i className="fa fa-linkedin-square"></i></a></li>
+                            <li><a href="https://www.instagram.com/be_ziq?igsh=MWJwcnZ5cjdnbm40bQ==" target="_blank"><i className="fa fa-facebook"></i></a></li>
+                            <li><a href="https://www.instagram.com/hzq.irsyad?igsh=MTR4dm9jdXgwMXgzbA==" target="_blank"><i className="fa fa-instagram"></i></a></li>
+                            <li><a href="https://my.linkedin.com/in/haziq-irsyad-r-535a4b314?trk=people-guest_people_search-card" target="_blank"><i className="fa fa-linkedin-square"></i></a></li>
                         </ul>
                     </article>
 
@@ -114,7 +113,7 @@ function FrontPage() {
                 <section className="video-section">
 
                     <video autoPlay muted loop playsInline className="back-video">
-                        <source src="../../public/vid/GravitiGamerz.mp4" type="video/mp4"/>
+                        <source src="/vid/GravitiGamerz.mp4" type="video/mp4"/>
                     </video>
 
                     <div className="video-overlay"></div>
@@ -137,7 +136,7 @@ function FrontPage() {
                 <section className="video-section">
 
                     <video autoPlay muted loop playsInline className="back-video">
-                        <source src="../../public/vid/GravitiGamerz_2.mp4" type="video/mp4"/>
+                        <source src="/vid/GravitiGamerz_2.mp4" type="video/mp4"/>
                     </video>
 
                     <div className="video-overlay"></div>
