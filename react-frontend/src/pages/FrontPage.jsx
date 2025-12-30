@@ -109,7 +109,7 @@ function FrontPage() {
                 <div className="grid-item reveal">
                     <h2 className="grid-title">About us</h2>
                     <p className="grid-desc">Meet the Kaki Gamerz Team.</p>
-                    <a href="/HTML/aboutPage.html" className="link">Meet the Squad.</a>
+                    <Link to="/about" className="link">Meet the Squad.</Link>
                     <img
                         src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
                         alt="Team"/>
