@@ -2,12 +2,14 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 // 1. IMPORT YOUR JSX FILE (The Dish)
+import ScrollToTop from './PinPagePosition.jsx';
 import FrontPage from './pages/FrontPage';
 import AboutPage from './pages/AboutPage'; // Make sure the filename matches EXACTLY
 
 function App() {
     return (
         <BrowserRouter>
+            <ScrollToTop />
             <Routes>
                 <Route path="/" element={<FrontPage />} />
 
