@@ -1,7 +1,6 @@
-/* --- Global Resets & Fonts --- */
-/* Matches your Front Page exactly */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
+/* --- Global & Base Styles --- */
 * {
     margin: 0;
     padding: 0;
@@ -10,14 +9,23 @@
 }
 
 body {
-    /*background: #f8f9fa; !* Keeping the soft gray for the profile card contrast *!*/
     background-color: #000;
     color: #333;
     overflow-x: hidden;
     min-height: 100vh;
 }
 
-/* --- EXACT NAVBAR FROM FRONT PAGE --- */
+/* --- Navigation --- */
+
+.sidebar, .mobile-menu {
+    display: none;
+}
+.sidebar i {
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
 nav {
     background-color: rgba(0,0,0,0.8);
     height: 48px;
@@ -28,6 +36,12 @@ nav {
     border-bottom: 1px solid rgba(255,255,233,0.1);
     backdrop-filter: saturate(180%) blur(20px);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .nav-content {
@@ -44,9 +58,36 @@ nav {
     color: #f5f5f7;
     text-decoration: none;
     font-family: 'Cinzel Decorative', cursive;
-    text-decoration: none;
     font-weight: 600;
     font-size: 1.1rem;
+}
+
+.mobile-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 20px;
+    gap: 2rem;
+
+    position: fixed;
+    top: 48px;
+    right: -100%;
+    width: 33%;
+    height: calc(100vh - 10px);
+    background-color: rgba(0, 0, 0, 0.88);
+    transition: 1s;
+}
+
+.mobile-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.mobile-menu.active {
+    right: 0;
 }
 
 .logo:hover {
@@ -55,13 +96,10 @@ nav {
     text-shadow: 0 0 5px rgba(102, 252, 241, 0.6);
 }
 
-/* Note: I removed the ".nav-links { display: flex }" block
-   because it was absent in your Front Page code. */
-
 .nav-links a {
     color: #d6d6d6;
     text-decoration: none;
-    font-size: 12px;  /* Matches your Front Page exactly */
+    font-size: 12px;
     margin: 0 15px;
     transition: color 0.3s;
 }
@@ -69,92 +107,20 @@ nav {
 .nav-links a:hover {
     color: #66fcf1;
     font-weight: bold;
-    text-shadow: 0 0 5px rgba(102, 252, 241, 0.6); /* Adds a slight neon glow to text */
+    text-shadow: 0 0 5px rgba(102, 252, 241, 0.6);
 }
 
 .search-box i {
     color: #d6d6d6;
     cursor: pointer;
-    /* Removed explicit font-size to match Front Page */
 }
 
-/* --- Layout Container (Specific to About Page) --- */
+/* --- Layout & Utilities --- */
 .container {
     max-width: 1100px;
     margin: 0 auto;
-    /* Keeps content from hiding behind the fixed navbar */
     padding: 80px 20px 40px;
 }
-
-/* Container to hold the title and tagline */
-.brand-header {
-    text-align: center;
-    margin-bottom: 40px;
-    position: relative;
-    z-index: 10; /* Ensures it sits on top of video/images */
-}
-
-/* The Main Title (H1) */
-.big-brand-title {
-    font-size: 4rem; /* Massive size (80px) */
-    font-weight: 700; /* Extra Bold */
-    margin: 0;
-    line-height: 1.1;
-    text-transform: uppercase;
-    letter-spacing: -2px; /* Tightens the letters for a modern look */
-    color: #fff;
-    font-family: 'Cinzel Decorative', cursive;
-}
-
-/* The Neon Effect */
-.neon-text {
-    color: #66fcf1; /* Your Neon Cyan */
-    text-shadow: 0 0 20px rgba(102, 252, 241, 0.5); /* Glow effect */
-}
-
-.neon-text-title {
-    color: #66fcf1; /* Your Neon Cyan */
-    text-shadow: 0 0 20px rgba(102, 252, 241, 0.5); /* Glow effect */
-    font-family: 'Cinzel Decorative', cursive;
-}
-
-/* The Tagline */
-.brand-tagline {
-    font-size: 1.2rem;
-    color: #c5c6c7; /* Light grey */
-    text-transform: uppercase;
-    letter-spacing: 6px; /* Widens the letters for a "Cinematic" look */
-    margin-top: 15px;
-    font-weight: 500;
-    display: inline-block;
-    padding-top: 15px;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .big-brand-title {
-        font-size: 3rem; /* Smaller on mobile */
-    }
-    .brand-tagline {
-        font-size: 0.9rem;
-        letter-spacing: 3px;
-    }
-}
-
-.about-text {
-    color: #c5c6c7; /* Light Grey text */
-    font-size: 1.1rem;
-    line-height: 1.6; /* Good spacing for readability */
-    text-align: center;
-    max-width: 800px; /* Prevents text from stretching too wide */
-    margin: 0 auto; /* Centers the block */
-    padding: 20px;
-}
-
-.text-white {
-    color: #fff;
-    font-weight: 600;
-}/* --- The Flexbox Fix (Centers the orphan item) --- */
 
 .All-Grid {
     display: flex;
@@ -163,38 +129,134 @@ nav {
     gap: 30px;
 }
 
+.separator {
+    border: 0;
+    height: 1px;
+    background: #45a29e;
+    background-image: linear-gradient(to right, #0b0c10, #66fcf1, #0b0c10);
+    margin: 40px auto;
+    max-width: 600px;
+}
+
+.separator2 {
+    border: 0;
+    height: 1px;
+    background: #45a29e;
+    background-image: linear-gradient(to right, #0b0c10, #66fcf1, #0b0c10);
+    margin: 10px auto 1px;
+    max-width: 600px;
+}
+
+.section-title {
+    text-align: center;
+}
+
+.text-white {
+    color: #fff;
+    font-weight: 600;
+}
+
+.highlight {
+    color: #66fcf1;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(102, 252, 241, 0.6);
+}
+
+/* --- Brand Header Section --- */
+.brand-header {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 10;
+}
+
+.big-brand-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    color: #fff;
+    font-family: 'Cinzel Decorative', cursive;
+}
+
+.brand-tagline {
+    font-size: 1.2rem;
+    color: #c5c6c7;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    margin-top: 15px;
+    font-weight: 500;
+    display: inline-block;
+    padding-top: 15px;
+}
+
+.about-text {
+    color: #c5c6c7;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.neon-text {
+    color: #66fcf1;
+    text-shadow: 0 0 20px rgba(102, 252, 241, 0.5);
+}
+
+.neon-text-title {
+    color: #66fcf1;
+    text-shadow: 0 0 20px rgba(102, 252, 241, 0.5);
+    font-family: 'Cinzel Decorative', cursive;
+}
+
 /* --- Manager Profile Cards --- */
 .managerProfile {
-    flex: 0 1 280px; /* Width logic */
-    background: #fafafa;
+    flex: 0 1 280px;
+    background-color: rgba(31, 40, 51, 0.85);
     border-radius: 15px;
+    border: 1px solid #45a29e;
     overflow: hidden;
     text-align: center;
-    padding-bottom: 20px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    min-height: 350px;
+    padding-bottom: 20px;
+    padding-top: 40px;
 }
 
 .managerProfile:hover {
     transform: translateY(-8px);
     border: 3px solid #66fcf1;
-
-    font-weight: bold;
-    text-shadow: 0 0 10px rgba(102, 252, 241, 0.6); /* Adds a slight neon glow to text */
-
+    box-shadow: 0 0 20px rgba(102, 252, 241, 0.4);
     transition: box-shadow 1s ease, transform 0.8s ease, border 0.3s ease;
 }
 
-/* Image Styling */
 .managerProfile img {
-    width: 100%;
-    height: 220px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #494949;
     background-color: #ddd;
 }
 
-/* Text Info Styling */
+.managerProfile:hover img {
+    transform: translateY(-1px);
+    border: 3px solid #66fcf1;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(102, 252, 241, 0.6);
+    transition: box-shadow 1s ease, transform 0.8s ease, border 0.3s ease;
+}
+
 .info {
     padding: 20px 15px 10px;
 }
@@ -202,7 +264,7 @@ nav {
 .info h5 {
     font-size: 1.1rem;
     margin-bottom: 8px;
-    color: #2c3e50;
+    color: #fff;
     font-weight: 700;
 }
 
@@ -215,16 +277,26 @@ nav {
 
 .info p:last-of-type {
     font-size: 0.85rem;
-    color: #777;
+    color: #aaa;
 }
 
-/* Social Media List */
+.job-desc {
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 12px;
+    line-height: 1.5;
+    padding: 0 10px;
+    font-style: italic;
+}
+
+/* --- Social Media Icons --- */
 .ManagerSocMed {
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-top: 10px;
+    margin-top: auto;
+    padding: 0;
 }
 
 .ManagerSocMed a {
@@ -234,64 +306,25 @@ nav {
 }
 
 .ManagerSocMed a:hover {
-    transform: scale(1.2);
-    opacity: 0.8;
-
+    transform: translateY(-3px) scale(1.2);
     color: #66fcf1;
-    font-weight: bold;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
-
+    text-shadow: 0 0 12px rgba(102, 252, 241, 0.8);
+    opacity: 1;
 }
 
-/* Specific Social Colors */
 .fa-facebook { color: #3b5998; }
 .fa-instagram { color: #e1306c; }
 .fa-linkedin-square { color: #0077B5; }
 
-/* --- Mobile Fixes --- */
-@media (max-width: 600px) {
-    .managerProfile {
-        flex: 1 1 100%;
-    }
-    .nav-links {
-        display: none;
-    }
-}
-
-.separator {
-    border: 0;
-    height: 1px;
-    background: #45a29e; /* Matches your border color */
-    background-image: linear-gradient(to right, #0b0c10, #66fcf1, #0b0c10); /* Neon fade effect */
-    margin: 40px auto; /* Centers the line and adds spacing */
-    max-width: 600px; /* Ensures line isn't too wide */
-}
-
-.separator2 {
-    border: 0;
-    height: 1px;
-    background: #45a29e; /* Matches your border color */
-    background-image: linear-gradient(to right, #0b0c10, #66fcf1, #0b0c10); /* Neon fade effect */
-    margin: 10px auto 1px; /* Centers the line and adds spacing */
-    max-width: 600px; /* Ensures line isn't too wide */
-}
-
-.section-title {
-    text-align: center;
-}
-
-/* Container for the two cards */
-/* 3. The Card Container */
-/* --- New Video Section Styles --- */
-
+/* --- Video Section --- */
 .video-section {
-    position: relative; /* Sets the boundaries */
+    position: relative;
     width: 100%;
-    min-height: 60vh; /* Adjust height as needed */
+    min-height: 60vh;
     display: flex;
     justify-content: center;
-    align-items: center; /* Centers the card perfectly */
-    overflow: hidden; /* Chops off excess video */
+    align-items: center;
+    overflow: hidden;
     padding: 20px;
 }
 
@@ -301,8 +334,8 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0; /* Sits at the back */
-    object-fit: contain; /* Ensures video covers area without stretching */
+    z-index: 0;
+    object-fit: contain;
     object-position: center;
 }
 
@@ -312,22 +345,17 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Darkens the video by 60% */
-    z-index: 1; /* Sits on top of video, below text */
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
 }
 
-/* --- Updating your Existing Card to be "Glass" --- */
-
+/* --- Mission & Vision Cards --- */
 .MissionVision-container {
     position: relative;
-    z-index: 2; /* Sits on top of everything */
-
-    /* CHANGE: Make background see-through */
-    background-color: rgba(31, 40, 51, 0.85); /* Semi-transparent dark blue */
-    backdrop-filter: blur(10px); /* Blurs the video behind the card */
-    -webkit-backdrop-filter: blur(10px); /* For Safari support */
-
-    /* Keep your existing styles */
+    z-index: 2;
+    background-color: rgba(31, 40, 51, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     color: #c5c6c7;
     padding: 40px;
     border-radius: 8px;
@@ -339,25 +367,44 @@ nav {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover Effect */
 .MissionVision-container:hover {
     transform: translateY(-10px);
     box-shadow: 0 0 20px rgba(102, 252, 241, 0.4);
 }
 
-/* Headers styling */
 .MissionVision-container h2 {
     color: #fff;
     border-bottom: 2px solid #66fcf1;
     display: inline-block;
     padding-bottom: 5px;
     margin-bottom: 15px;
-    text-transform: uppercase; /* Optional: Looks more "Gamer" */
+    text-transform: uppercase;
 }
 
-/* Highlighted words */
-.highlight {
-    color: #66fcf1;
-    font-weight: bold;
-    text-shadow: 0 0 5px rgba(102, 252, 241, 0.6); /* Adds a slight neon glow to text */
+/* --- Media Queries --- */
+@media (max-width: 768px) {
+    .big-brand-title {
+        font-size: 3rem;
+    }
+    .brand-tagline {
+        font-size: 0.9rem;
+        letter-spacing: 3px;
+    }
+
+    .desktop-menu {
+        display: none;
+    }
+
+    .sidebar {
+        display: block;
+    }
+}
+
+@media (max-width: 600px) {
+    .managerProfile {
+        flex: 1 1 100%;
+    }
+    .nav-links {
+        display: none;
+    }
 }

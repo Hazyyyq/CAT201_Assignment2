@@ -2,6 +2,7 @@ import {useEffect, useState} from 'react'
 import {Link} from 'react-router-dom';
 
 import '../style/FrontPage.css'
+import Footer from "../components/Footer.jsx";
 
 function FrontPage() {
     const [count, setCount] = useState(0)
@@ -116,6 +117,8 @@ function FrontPage() {
                         alt="Team"/>
                 </div>
             </div>
+
+            <Footer />
         </>
     )
 }

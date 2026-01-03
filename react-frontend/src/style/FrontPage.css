@@ -1,8 +1,10 @@
+/* src/style/FrontPage.css */
+
+/* --- Global & Base Styles --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
@@ -11,6 +13,7 @@ body {
     overflow-x: hidden;
 }
 
+/* --- Navigation --- */
 nav {
     background-color: rgba(0, 0, 0, 0.8);
     height: 48px;
@@ -37,10 +40,9 @@ nav {
     color: #f5f5f7;
     text-decoration: none;
     font-family: 'Cinzel Decorative', cursive;
-    font-weight: 700; /* This triggers the Bold version */
+    font-weight: 700;
     font-weight: 600;
     font-size: 1.1rem;
-
 }
 
 .logo:hover {
@@ -68,6 +70,7 @@ nav {
     cursor: pointer;
 }
 
+/* --- Hero Section --- */
 .hero-section {
     position: relative;
     min-height: 100vh;
@@ -90,7 +93,6 @@ nav {
 .light-theme {
     background-color: #f5f5f7;
     color: #1d1d1f;
-
 }
 
 .content-wrapper {
@@ -120,6 +122,7 @@ nav {
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
+/* --- Buttons --- */
 .cta-links {
     display: flex;
     gap: 15px;
@@ -167,6 +170,7 @@ nav {
     text-shadow: 0 0 5px rgba(102, 252, 241, 0.6);
 }
 
+/* --- Grid Section --- */
 .grid-section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -190,7 +194,6 @@ nav {
 .grid-item:hover {
     transform: scale(1.02);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-
 }
 
 .grid-title {
@@ -205,6 +208,12 @@ nav {
     margin-bottom: 15px;
 }
 
+.grid-item img {
+    width: 80%;
+    height: auto;
+}
+
+/* --- Links --- */
 .link {
     color: #0066cc;
     text-decoration: none;
@@ -218,12 +227,7 @@ nav {
     text-shadow: 0 0 5px rgba(102, 252, 241, 0.6);
 }
 
-.grid-item img {
-    width: 80%;
-    height: auto;
-}
-
-
+/* --- Animation Utilities --- */
 .reveal {
     position: relative;
     transform: translateY(50px);
