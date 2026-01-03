@@ -5,7 +5,7 @@ import '../style/FrontPage.css'
 import Footer from "../components/Footer.jsx";
 
 function FrontPage() {
-    const [count, setCount] = useState(0)
+    const [isOpen, setIsOpen] = useState(0);
 
     useEffect(() => {
         window.addEventListener('scroll', reveal);
@@ -28,22 +28,31 @@ function FrontPage() {
         <>
             <nav>
                 <div className="nav-content">
-
                     <Link to="/" className="logo">Kaki Gamerz</Link>
-
-                    <div className="nav-links">
-                        <a href="#">Phone</a>
-                        <a href="#">Watch</a>
-                        <a href="#">Tablet</a>
-                        <a href="#">Games</a>
+                    <div className="nav-links desktop-menu">
+                        <Link to="/phone">Phone</Link>
+                        <Link to="/watch">Watch</Link>
+                        <Link to="/tablet">Tablet</Link>
+                        <Link to="/games">Games</Link>
                         <Link to="/about">About Us</Link>
-
                     </div>
-
+                    <div className="nav-icons"></div>
                     <div className="search-box">
                         <i className="fa fa-search"></i>
                     </div>
+                    <div className="sidebar" onClick={() => setIsOpen(!isOpen)}>
+                        <i className={`fa ${isOpen ? "fa-times" : "fa-bars"}`}></i>
+                    </div>
                 </div>
+
+                <div className={`mobile-menu ${isOpen ? "active" : " "}`}>
+                    <Link to="/phone">Phone</Link>
+                    <Link to="/watch">Watch</Link>
+                    <Link to="/tablet">Tablet</Link>
+                    <Link to="/games">Games</Link>
+                    <Link to="/about">About Us</Link>
+                </div>
+
             </nav>
 
             <section className="hero-section dark-theme">

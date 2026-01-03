@@ -119,7 +119,7 @@ function FrontPage() {
                 </article>
 
                 <article className="managerProfile">
-                    <img src="/img/test.jpeg" alt="Muhammad Haziq Irsyad bin Mohd Rafeein"/>
+                    <img src="/img/Haziq.png" alt="Muhammad Haziq Irsyad bin Mohd Rafeein"/>
                     <div className="info">
                         <h5>Muhammad Haziq Irsyad bin Mohd Rafeein</h5>
                         <p>Chief Operating Officer</p>
