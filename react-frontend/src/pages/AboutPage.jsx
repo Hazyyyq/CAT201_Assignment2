@@ -20,10 +20,6 @@ function AboutPage() {
                 <div className="nav-content">
                     <div className="nav-links desktop-menu">
                         <Link to="/">Home</Link>
-                        <Link to="/phone">KakiPhone</Link>
-                        <Link to="/watch">KakiWatch</Link>
-                        <Link to="/tablet">KakiPad</Link>
-                        <Link to="/games">Games</Link>
                     </div>
 
                     <div className="sidebar" onClick={() => setIsOpen(!isOpen)}>
