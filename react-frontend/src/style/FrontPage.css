@@ -389,3 +389,16 @@ nav {
         width: 90%;
     }
 }
+
+@media (max-width: 768px) {
+    .hero-bg-img {
+        /* 1. Center the GIF so the main action isn't cut off */
+        object-position: center center;
+
+        /* 2. Ensure it covers the screen without stretching/distorting */
+        object-fit: cover;
+
+        /* 3. OPTIONAL: Darken it more on mobile so pixelation is less obvious */
+        filter: brightness(0.6);
+    }
+}
