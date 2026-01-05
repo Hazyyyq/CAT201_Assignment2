@@ -1,25 +1,23 @@
-// src/App.jsx
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-// 1. IMPORT YOUR JSX FILE (The Dish)
-import ScrollToTop from './PinPagePosition.jsx';
+// IMPORT YOUR PAGES
 import FrontPage from './pages/FrontPage';
-import AboutPage from './pages/AboutPage'; // Make sure the filename matches EXACTLY
+import AboutPage from './pages/AboutPage'; // <--- Import the new page
 
 function App() {
     return (
-        <BrowserRouter>
-            <ScrollToTop />
+        <Router>
             <Routes>
+                {/* URL: / -> Shows FrontPage */}
                 <Route path="/" element={<FrontPage />} />
 
-                {/* 2. CREATE THE ROUTE (The Menu Item) */}
-                {/* We are naming this path "/about" */}
+                {/* URL: /about -> Shows AboutPage */}
                 <Route path="/about" element={<AboutPage />} />
 
             </Routes>
-        </BrowserRouter>
+        </Router>
     );
 }
 
 export default App;
+
