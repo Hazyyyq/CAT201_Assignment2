@@ -1,30 +1,46 @@
 // src/components/Footer.jsx
-import { Link } from 'react-router-dom';
 import '../style/Footer.css';
 
 function Footer() {
     return (
-        <footer className="site-footer">
+        <footer className="pixel-footer">
+
+            {/* 1. WRAPPER: Holds the columns side-by-side */}
             <div className="footer-content">
-                <div className="footer-section brand">
-                    <h3>Kaki Gamerz Corp.</h3>
+
+                {/* Column 1: Company Info */}
+                <div className="footer-column">
+                    <h3 className="footer-heading">Kaki Gamerz Corp.</h3>
                     <p>Leveling up reality since 1969.</p>
                 </div>
 
-                <div className="footer-section links">
-
+                {/* Column 2: Contact Us */}
+                <div className="footer-column">
+                    <h3 className="footer-heading">Contact Us</h3>
+                    <ul className="footer-links-list">
+                        <li className="contact-info-item">
+                            <i className="fa fa-map-marker"></i>
+                            <span>USM, Penang, Malaysia</span>
+                        </li>
+                        <li className="contact-info-item">
+                            <i className="fa fa-phone"></i>
+                            <span>+60 19-88579</span>
+                        </li>
+                        <li className="contact-info-item">
+                            <i className="fa fa-envelope"></i>
+                            <span>kakigamerz@gmail.com</span>
+                        </li>
+                    </ul>
                 </div>
 
-                <div className="footer-section contact">
-                    <h4>Contact Us</h4>
-                    <p><i className="fa fa-map-marker"></i> USM, Penang, Malaysia</p>
-                    <p><i className="fa fa-phone"></i> +60 19-88579</p>
-                    <p><i className="fa fa-envelope"></i> kakigamerz@gmail.com</p>
-                </div>
             </div>
+
+
+            {/* 2. BOTTOM SECTION: Sits underneath the wrapper */}
             <div className="footer-bottom">
-                <p>&copy; 2025 Kaki Gamerz Corp. All rights reserved.</p>
+                <p>&copy; 2026 Kaki Gamerz Corp. All rights reserved.</p>
             </div>
+
         </footer>
     );
 }
