@@ -160,7 +160,7 @@ nav {
     transform: translate(-50%, -50%); /* Perfectly centers element */
     z-index: 3;
 
-    font-family: 'DotGothic16', sans-serif, 'Cinzel Decorative', cursive;
+    font-family: 'DotGothic16', 'Cinzel Decorative', sans-serif, cursive;
     font-size: 4rem;
     font-weight: bold;
     letter-spacing: 10px;
@@ -175,6 +175,12 @@ nav {
     color: transparent;
     -webkit-text-stroke: 2px rgba(255, 255, 255, 0.3);
     text-shadow: 0 0 30px rgba(215, 25, 32, 0.2);
+}
+
+.neon-text-title-front {
+    color: #66fcf1;
+    text-shadow: 0 0 20px rgba(102, 252, 241, 0.5);
+    font-family: 'DotGothic16', 'Cinzel Decorative', sans-serif, cursive;
 }
 
 /* =========================================

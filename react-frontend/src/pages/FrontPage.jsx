@@ -65,7 +65,9 @@ function FrontPage() {
                     className="hero-bg-img"
                     alt="Home Background"
                 />
-                <h1 className="hero-store-title">KAKI GAMERZ</h1>
+                <h1 className="hero-store-title">
+                    KAKI <span className="neon-text-title-front">GAMERZ</span>
+                </h1>
             </section>
 
             {/* --- PHONE INTRO (ID: phone) --- */}
