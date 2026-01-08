@@ -7,10 +7,16 @@ To run the project on your localhost:
 
 1. Clone the repository or Download as ZIP files:
 2. Install dependencies via terminal:
-```   npm install ```
+``` bash
+npm install
+```
 3. Change the directory via terminal:
-```   cd react-frontend ```
+``` bash
+   cd react-frontend 
+```
 4. Run the dev via terminal:
-```   npm run dev ```
+``` bash
+   npm run dev 
+```
 5. Click the link of the local host
 6. Enjoy the Kaki Gamerz website
