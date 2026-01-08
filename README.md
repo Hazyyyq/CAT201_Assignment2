@@ -19,4 +19,11 @@ cd react-frontend
 npm run dev 
 ```
 5. Click the link of the local host
+```bash
+  VITE v7.3.0  ready in 3328 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+```
 6. Enjoy the Kaki Gamerz website
