@@ -12,11 +12,11 @@ npm install
 ```
 3. Change the directory via terminal:
 ``` bash
-   cd react-frontend 
+cd react-frontend 
 ```
 4. Run the dev via terminal:
 ``` bash
-   npm run dev 
+npm run dev 
 ```
 5. Click the link of the local host
 6. Enjoy the Kaki Gamerz website
