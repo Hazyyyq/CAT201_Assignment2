@@ -2,6 +2,9 @@
 A repository for CAT201 Assignment 2, Introduction to our company static (or dynamic) webpage.  
 This repository will be used as a git control to keep track of each commit and update.
 
+## Kaki Gamerz Website Link
+https://kakigamerz.vercel.app
+
 ## Run Locally
 To run the project on your localhost:
 
